@@ -23,11 +23,14 @@ company_costs = int(input("Введите издержки фирмы: "))
 profit = company_revenue - company_costs
 print(f"Финансовый результат - прибыль. Ее величина: "
       f"{profit}")
-print("Значит вычисляем рентабельность выручки "
-      "(соотношение прибыли к выручке)")
-print(f"Рентабельность выручки = {round(company_costs/company_revenue,1)}")
-number_of_employees = int(input("Введите численность сотрудников фирмы: "))
-print(f"Прибыль фирмы в расчете на одного сотрудника = "
+if profit>0:
+    print("Значит вычисляем рентабельность выручки "
+          "(соотношение прибыли к выручке)")
+    print(f"Рентабельность выручки = {round(company_costs/company_revenue,1)}")
+    number_of_employees = int(input("Введите численность сотрудников фирмы: "))
+    print(f"Прибыль фирмы в расчете на одного сотрудника = "
       f"{round(profit/number_of_employees,1)}")
+else:
+      print("Фирма не рентабельна")
 
 
