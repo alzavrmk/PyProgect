@@ -22,7 +22,7 @@
 
 distance = float(input("Результат спортсмена в первый день (км)- "))
 distance_goal = float(input("Требуемый результат (км) - "))
-day = 1;
+day = 1
 print(f"{day}-й день: {distance}")
 while distance <= distance_goal:
     day += 1
