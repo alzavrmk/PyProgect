@@ -27,7 +27,7 @@
 """
 print('Опишем структуру базы данных "Товары".')
 structure = []
-n = int(input('Введите количество наименований: '))
+n = int(input('Введите количество характеристик товара: '))
 for i in range(n):
     parametr = input(f'{i + 1} характеристика: ')
     structure.append(parametr)
@@ -35,15 +35,21 @@ print(structure)
 
 print('Внесем данные в базу данных "Товары".')
 goods = []
-x = {}
 k = 1
 while True:
+    x = {}
     for i in range(len(structure)):
-        x[structure[i]] = input(f'{structure[i]}: ')#формирую кортеж
+        x[structure[i]] = input(f'{structure[i]}: ')
     goods.append((k, x))
     k = k + 1
     ex = input('Продолжить? +/- ')
     if ex == "-":
         break
 print(goods)
-
+statist_ = {}
+for i in range(len(structure)):
+    names_lst = []
+    for j in range(len(goods)):
+        names_lst.append(goods[j][1][structure[i]])
+    statist_[structure[i]] = names_lst
+print(statist_)
