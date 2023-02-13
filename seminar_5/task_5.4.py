@@ -13,5 +13,6 @@ def find_sum(n):
     if n == 1:
         return 1
     return 1+(-1)*0.5*find_sum(n-1)
+
 n = int(input('Введите натуральное число n: '))
-print(f'Сумма {n} первых членов ряда равна:  {find_sum(n)}')
+print(f'Сумма {n}  первых членов ряда равна:  {find_sum(n)}')
